@@ -2,6 +2,7 @@
 
 namespace XHGui\Controller;
 
+use Slim\App;
 use Slim\Http\Request;
 use Slim\Http\Response;
 use Slim\Slim as App;

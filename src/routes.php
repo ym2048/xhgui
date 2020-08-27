@@ -3,7 +3,7 @@
  * Routes for Xhgui
  */
 
-use Slim\Slim as App;
+use Slim\App;
 use Slim\Views\Twig;
 use XHGui\Controller\CustomController;
 use XHGui\Controller\ImportController;

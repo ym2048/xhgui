@@ -2,7 +2,7 @@
 
 namespace XHGui;
 
-use Slim\Slim as App;
+use Slim\App;
 
 abstract class AbstractController
 {

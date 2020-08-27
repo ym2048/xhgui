@@ -2,8 +2,8 @@
 
 namespace XHGui\Test\Controller;
 
+use Slim\App;
 use Slim\Environment;
-use Slim\Slim as App;
 use XHGui\Controller\WatchController;
 use XHGui\Searcher\SearcherInterface;
 use XHGui\ServiceContainer;
