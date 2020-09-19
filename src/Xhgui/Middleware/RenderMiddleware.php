@@ -2,16 +2,26 @@
 
 namespace XHGui\Middleware;
 
-use Slim\Middleware;
+use Psr\Http\Message\RequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
+use Slim\App;
 
-class RenderMiddleware extends Middleware
+class RenderMiddleware
 {
-    public function call()
+    /** @var App */
+    private $app;
+
+    public function __construct(App $app)
+    {
+        $this->app = $app;
+    }
+
+    public function __invoke(Request $req, Response $res, callable $next)
     {
         $app = $this->app;
 
         // Run the controller action/route function
-        $this->next->call();
+        $next();
 
         // Render the template.
         if (isset($app->controller)) {
