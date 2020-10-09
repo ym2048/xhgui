@@ -3,7 +3,7 @@
 namespace XHGui\Test\Controller;
 
 use Slim\App;
-use Slim\Environment;
+use Slim\Http\Environment;
 use XHGui\Controller\ImportController;
 use XHGui\Controller\RunController;
 use XHGui\Saver\MongoSaver;
