@@ -46,9 +46,9 @@ class RunController extends AbstractController
 
         $result = $this->searcher->getAll([
             'sort' => $sort,
-            'page' => $request->get('page'),
-            'direction' => $request->get('direction'),
-            'perPage' => $this->app->config('page.limit'),
+            'page' => (int)$request->get('page', SearcherInterface::DEFAULT_PAGE),
+            'direction' => $request->get('direction', SearcherInterface::DEFAULT_DIRECTION),
+            'perPage' => (int)$this->app->config('page.limit'),
             'conditions' => $search,
             'projection' => true,
         ]);
